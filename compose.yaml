@@ -1,0 +1,36 @@
+services:
+
+  db-service:
+    image: postgres:13
+    ports:
+      - "${DB_SERVICE_PORT}:${DB_SERVICE_PORT}"
+    environment:
+      POSTGRES_USER: $DB_USER
+      POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_DB: $DB_NAME
+    volumes:
+      - ./be/pdf2imgbe/resources/DDL.sql:/docker-entrypoint-initdb.d/DDL.sql
+  
+  be-service:
+    build:
+      context: ./be
+      dockerfile: ./Dockerfile
+    image: pdf2imgbe
+    ports:
+      - "${BE_SERVICE_PORT}:${BE_APP_PORT}"
+    env_file:
+      - .env
+    depends_on:
+      - db-service
+
+  fe-service:
+    build:
+      context: ./fe
+      dockerfile: ./Dockerfile
+    image: pdf2imgfe
+    ports:
+      - "${FE_SERVICE_PORT}:${FE_APP_PORT}"
+    env_file:
+      - .env
+    depends_on:
+      - be-service

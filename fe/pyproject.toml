@@ -1,0 +1,14 @@
+[project]
+name = "pdf2imgfe"
+version = "0.1.0"
+description = "Web app to convert PDF to images"
+authors = [{name = "Giulio Ricchelli", email = "giulioricche@gmail.com"}]
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit (==1.42.1)",
+    "streamlit-modal (==0.1.2)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
