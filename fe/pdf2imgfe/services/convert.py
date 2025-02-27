@@ -1,4 +1,4 @@
-from lib.log import logger
+from pdf2imgfe.lib.log import logger
 
 import os
 import base64
@@ -7,8 +7,8 @@ import typing as T
 from http import HTTPStatus
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
-from lib.exception import ProcessException
-from lib.statics import EnvKey, ConversionStatus
+from pdf2imgfe.lib.exception import ProcessException
+from pdf2imgfe.lib.statics import EnvKey, ConversionStatus
 
 
 class ConvertService:

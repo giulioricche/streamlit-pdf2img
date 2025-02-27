@@ -2,7 +2,7 @@ import typing as T
 from datetime import datetime
 from pydantic import BaseModel
 
-from lib.statics import ConversionStatus
+from pdf2imgbe.lib.statics import ConversionStatus
 
 
 class Conversion(BaseModel):

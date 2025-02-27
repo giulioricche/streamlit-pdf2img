@@ -1,13 +1,13 @@
-from lib.log import logger
+from pdf2imgbe.lib.log import logger
 
 import os
 import asyncio
 import pdf2image
 
-from services.db import SQLClient
-from lib.exception import ProcessException
-from lib.model import Conversion
-from lib.statics import EnvKey, ConversionStatus, IMAGE_FILENAME_FORMAT, IMAGE_FILE_EXTENSION
+from pdf2imgbe.services.db import SQLClient
+from pdf2imgbe.lib.exception import ProcessException
+from pdf2imgbe.lib.model import Conversion
+from pdf2imgbe.lib.statics import EnvKey, ConversionStatus, IMAGE_FILENAME_FORMAT, IMAGE_FILE_EXTENSION
 
 
 async def convert_pdf_to_images(sql_client: SQLClient, conversion: Conversion, file_content: bytes, output_path: str):

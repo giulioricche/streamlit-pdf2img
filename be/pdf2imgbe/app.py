@@ -1,4 +1,4 @@
-from lib.log import logger
+from pdf2imgbe.lib.log import logger
 
 import os
 import re
@@ -10,10 +10,10 @@ from http import HTTPStatus
 from datetime import datetime
 from fastapi import FastAPI, UploadFile, File, HTTPException, BackgroundTasks
 
-from services.db import SQLClient
-from lib.pdf_converter import convert_pdf_to_images
-from lib.model import Conversion, ConversionResults
-from lib.statics import RESULTS_FOLDER, IMAGE_FILENAME_FORMAT, ConversionStatus
+from pdf2imgbe.services.db import SQLClient
+from pdf2imgbe.lib.pdf_converter import convert_pdf_to_images
+from pdf2imgbe.lib.model import Conversion, ConversionResults
+from pdf2imgbe.lib.statics import RESULTS_FOLDER, IMAGE_FILENAME_FORMAT, ConversionStatus
 
 
 # Initialize the app

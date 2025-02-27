@@ -1,11 +1,11 @@
-from lib.log import logger
+from pdf2imgbe.lib.log import logger
 
 import os
 import typing as T
 from psycopg2 import connect, OperationalError
 
-from lib.statics import ConversionStatus
-from lib.model import Conversion
+from pdf2imgbe.lib.statics import ConversionStatus
+from pdf2imgbe.lib.model import Conversion
 
 
 class SQLClient:

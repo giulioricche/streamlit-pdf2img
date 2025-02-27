@@ -1,4 +1,4 @@
-from lib.log import logger
+from pdf2imgfe.lib.log import logger
 
 import typing as T
 import pandas as pd

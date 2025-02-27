@@ -1,7 +1,7 @@
 import os
 import logging
 
-from lib.statics import EnvKey
+from pdf2imgfe.lib.statics import EnvKey
 
 # Set up logging
 logger = logging.getLogger("streamlit-pdf2img")

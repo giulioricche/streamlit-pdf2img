@@ -1,14 +1,14 @@
-from lib.log import logger
+from pdf2imgfe.lib.log import logger
 
 import asyncio
 import streamlit as st
 
 from app_components import db_modal
 
-from services.convert import ConvertService
-from lib.io import zip_images
-from lib.exception import ProcessException
-from lib.statics import ConversionStatus, IMAGE_FILENAME_FORMAT, IMAGE_FILE_EXTENSION
+from pdf2imgfe.services.convert import ConvertService
+from pdf2imgfe.lib.io import zip_images
+from pdf2imgfe.lib.exception import ProcessException
+from pdf2imgfe.lib.statics import ConversionStatus, IMAGE_FILENAME_FORMAT, IMAGE_FILE_EXTENSION
 
 # Initialize the app
 st.set_page_config(page_title="PDF to Image Converter", page_icon="🧞‍♂️", layout="wide")

@@ -9,7 +9,9 @@ dependencies = [
     "psycopg2 (==2.9.10)",
     "pdf2image (==1.17.0)",
     "python-multipart (==0.0.20)",
-    "uvicorn (==0.34.0)"
+    "uvicorn (==0.34.0)",
+    "dotenv (==0.9.9)",
+    "pytest (==8.3.4)"
 ]
 
 [build-system]
