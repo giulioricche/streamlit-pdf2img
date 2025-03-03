@@ -11,7 +11,7 @@ dependencies = [
     "python-multipart (==0.0.20)",
     "uvicorn (==0.34.0)",
     "dotenv (==0.9.9)",
-    "pytest (==8.3.4)"
+    "pytest (==8.3.4)",
 ]
 
 [build-system]
